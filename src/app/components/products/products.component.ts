@@ -72,7 +72,8 @@ export class ProductsComponent implements OnInit {
     const product: CreateProductDTO = {
       title: 'Nuevo Producto',
       description: 'Venta de Truenos',
-      images: ['https://placeimg.com/640/480/any','https://placeimg.com/640/480/any'],
+      // images: ['https://placeimg.com/640/480/any','https://placeimg.com/640/480/any'],
+      images: ['https://picsum.photos/640/480','https://picsum.photos/640/480'],
       price: 500,
       categoryId: 2
     }

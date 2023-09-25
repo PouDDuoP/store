@@ -11,7 +11,7 @@ import { environment } from './../../environments/environment'
 })
 export class ProductsService {
 
-  // private apiUrl = 'https://young-sands-07814.herokupiaapp.com/api/products';
+  // private apiUrl = 'https://young-sands-07814.herokuapp.com/api/products';
   private apiUrl = `${environment.API_URL}/api/products`;
 
   constructor(
@@ -24,6 +24,7 @@ export class ProductsService {
       params = params.set('limit', limit);
       params = params.set('offset', offset);
     }
+    console.log(environment)
     return this.http.get<Product[]>(this.apiUrl, { params })
     .pipe(
       retry(3)
